@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import dynamic from 'next/dynamic';
 import { NextPage } from 'next';
 import { SEO } from 'components/seo';
@@ -67,6 +67,7 @@ export async function getServerSideProps({ params }) {
       slug: params.slug,
     },
   });
+
   return {
     props: {
       data,

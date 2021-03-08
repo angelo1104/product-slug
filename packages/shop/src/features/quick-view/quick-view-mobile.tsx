@@ -138,6 +138,22 @@ const QuickViewMobile: React.FunctionComponent<QuickViewProps> = ({
                 </ProductPriceWrapper>
 
                 <ProductCartBtn>
+                  <Button
+                      className='cart-button'
+                      variant='secondary'
+                      borderRadius={100}
+                      onClick={handleAddClick}
+                  >
+                    <ButtonText>
+                      <FormattedMessage
+                          id={"afilliate-link-button"}
+                          defaultMessage='Generate affiliate link'
+                      />
+                    </ButtonText>
+                  </Button>
+                </ProductCartBtn>
+
+                <ProductCartBtn>
                   {!isInCart(id) ? (
                     <Button
                       className='cart-button'
